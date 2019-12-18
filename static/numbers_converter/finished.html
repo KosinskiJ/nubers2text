@@ -1,0 +1,8 @@
+{% extends 'includes/base.html' %}
+
+{% block content %}
+    <h4>Wynik to:</h4>
+    <b>{{ converted_number }}</b>
+    <hr>
+    <a class="btn btn-info" href="{% url 'converter_home' %}">Wykonaj kolejną kalkulację</a>
+{% endblock %}

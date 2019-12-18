@@ -1,0 +1,2 @@
+class TooBigNumberException(Exception):
+    pass

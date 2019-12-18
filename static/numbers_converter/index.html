@@ -1,0 +1,38 @@
+{% extends 'includes/base.html' %}
+
+{% block content %}
+    <br>
+    <h3>Konwerter liczb na ich odpowiednik tekstowy</h3>
+    <br>
+    <form id="converter-form" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button id="submit-button" class="btn btn-success" type="submit">Konwertuj</button>
+    </form>
+
+    <hr>
+{% endblock %}
+
+{% block scripts %}
+{#    <script type="application/javascript">#}
+{#        $(document).ready(function () {#}
+{#            let converterForm = $("#converter-form");#}
+{#            let convertedNumberParagraph = $("#converted-number-paragraph");#}
+{##}
+{#            converterForm.on('submit', '#converter-form', function (e) {#}
+{#                e.preventDefault();#}
+{#                $.ajax({#}
+{#                    type: 'POST',#}
+{#                    url: '{% url 'converter_ajax' %}',#}
+{#                    data: {#}
+{#                        number: $("#id_number").val(),#}
+{#                        csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val(),#}
+{#                    },#}
+{#                    success: function (json) {#}
+{#                        console.log('test')#}
+{#                    },#}
+{#                });#}
+{#            })#}
+{#        });#}
+{#    </script>#}
+{% endblock %}
